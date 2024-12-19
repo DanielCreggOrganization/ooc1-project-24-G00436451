@@ -1,4 +1,5 @@
 Superhero Manager
+
 Overview
 The Superhero Manager application is a Java-based program designed to help users manage a collection of superhero comic books. Users can create, view, and delete superheroes, as well as perform statistical and utility operations like analyzing sales data and converting prices.
 
