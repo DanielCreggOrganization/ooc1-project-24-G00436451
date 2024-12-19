@@ -15,7 +15,6 @@ Compare Comic Sales: Identify the best and worst-selling comics.
 3. Menu Navigation
 Organized into two main submenus: Superhero Management and Statistics and Utilities.
 Allows smooth transitions between the main menu and submenus for better usability.
-
 Class Design
 1. ComicBookCharacter (Abstract Class)
 Purpose: Serves as a base class for all comic book characters.
@@ -29,11 +28,9 @@ Implements the displayCharacterDetails() method to display superhero-specific in
 Maintains a static count of superheroes for unique identification.
 3. Main (Driver Class)
 Purpose: Controls the program flow and manages user interactions.
-
 Key Features:
 Contains menus for superhero management and statistical utilities.
 Handles user input validation and provides appropriate feedback.
-
 How to Run the Program
 Compile the source files using the Java compiler:
 bash
@@ -41,10 +38,8 @@ Copy code
 javac ie/atu/SuperheroManager/*.java
 Run the program:
 bash
-
 Copy code
 java ie.atu.SuperheroManager.Main
-
 Example Usage
 Create a Superhero
 Choose "Superhero Management" > "Create a Superhero".
@@ -54,11 +49,9 @@ Convert Comic Prices
 Choose "Statistics and Utilities" > "Convert Comic Prices".
 Select a target currency (e.g., USD, GBP, JPY).
 View the converted prices displayed in the selected currency.
-
 Dependencies
 Java Development Kit (JDK) 8 or higher.
 A terminal or IDE (e.g., IntelliJ IDEA, Eclipse) to run the program.
-
 Future Enhancements
 Add the ability to update superhero details.
 Include more complex sales analytics (e.g., trend analysis).
