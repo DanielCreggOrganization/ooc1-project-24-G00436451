@@ -1,114 +1,59 @@
-Superhero Manager - README
+Superhero Manager
 Overview
-The Superhero Manager is a simple console-based Java application that allows users to manage superhero characters, including creating, viewing, and deleting superheroes. It utilizes an object-oriented approach with inheritance, polymorphism, and encapsulation. The program consists of two main classes: Main and Superhero (with a parent class ComicBookCharacter).
+The Superhero Manager application is a Java-based program designed to help users manage a collection of superhero comic books. Users can create, view, and delete superheroes, as well as perform statistical and utility operations like analyzing sales data and converting prices.
 
 Features
-Create a Superhero: Allows users to input details for a new superhero, such as comic name, volume, price, and whether they have superpowers.
-View All Superheroes: Displays a list of all superheroes with their respective details (comic, volume, price, and superpowers).
-Delete a Superhero: Deletes a superhero based on their unique ID and shifts the remaining superheroes in the array to fill the gap.
-Exit: Terminates the program.
-Technologies Used
-Java (JDK 8 or later)
-Basic concepts of Object-Oriented Programming (OOP)
-Project Structure
-1. Main Class (Main.java)
-This class contains the main method and handles user interaction, including displaying the menu and responding to user input. The options available are:
-
-Create a superhero
-View all superheroes
-Delete a superhero
-Exit the program
-java
+1. Superhero Management
+Create a Superhero: Add a new superhero with details such as comic name, volume, price, superpower status, and sales data.
+View All Superheroes: Display the list of all superheroes with their respective details and sales.
+Delete a Superhero: Remove a superhero from the collection using their unique ID.
+2. Statistics and Utilities
+Total Superheroes: View the total number of superheroes in the system.
+Average Comic Price: Calculate and display the average price of all comic books.
+Convert Comic Prices: Convert the price of comic books into different currencies (USD, GBP, JPY).
+Compare Comic Sales: Identify the best and worst-selling comics.
+3. Menu Navigation
+Organized into two main submenus: Superhero Management and Statistics and Utilities.
+Allows smooth transitions between the main menu and submenus for better usability.
+Class Design
+1. ComicBookCharacter (Abstract Class)
+Purpose: Serves as a base class for all comic book characters.
+Key Features:
+Encapsulates common attributes: comic, price, volume, and hasSuperpowers.
+Includes an abstract method displayCharacterDetails() to be implemented by subclasses.
+2. Superhero (Subclass)
+Purpose: Represents a specific type of comic book character—superheroes.
+Key Features:
+Implements the displayCharacterDetails() method to display superhero-specific information.
+Maintains a static count of superheroes for unique identification.
+3. Main (Driver Class)
+Purpose: Controls the program flow and manages user interactions.
+Key Features:
+Contains menus for superhero management and statistical utilities.
+Handles user input validation and provides appropriate feedback.
+How to Run the Program
+Compile the source files using the Java compiler:
+bash
 Copy code
-// A brief look at the menu structure in the Main class
-System.out.println("1. Create a Superhero");
-System.out.println("2. View All Superheroes");
-System.out.println("3. Delete a Superhero");
-System.out.println("4. Exit");
-2. ComicBookCharacter Class (ComicBookCharacter.java)
-An abstract class representing a generic comic book character, which could be a superhero or other characters. It defines the common attributes and an abstract method for displaying character details:
-
-Comic name
-Volume number
-Price (EUR)
-Superpower status
-java
+javac ie/atu/SuperheroManager/*.java
+Run the program:
+bash
 Copy code
-// Abstract class with instance variables and an abstract method for displaying details
-public abstract void displayCharacterDetails();
-3. Superhero Class (Superhero.java)
-A subclass of ComicBookCharacter, which represents a superhero. It extends the parent class by providing a concrete implementation for the displayCharacterDetails method and introduces a static count for tracking superhero instances.
-
-java
-Copy code
-// Superhero class extending ComicBookCharacter
-@Override
-public void displayCharacterDetails() {
-    // Displaying superhero details
-}
-How to Run the Application
-Clone or Download the Project:
-
-Clone the repository or download the project files to your local machine.
-Compile the Code:
-
-Navigate to the project directory in the terminal or command prompt and run:
-css
-Copy code
-javac Main.java ComicBookCharacter.java Superhero.java
-Run the Application:
-
-After compiling the classes, run the main application:
-css
-Copy code
-java Main
-Interact with the Menu:
-
-The program will present a menu with options to create, view, delete superheroes, or exit.
-Use the corresponding number (1-4) to navigate through the options.
+java ie.atu.SuperheroManager.Main
 Example Usage
-Menu:
-markdown
-Copy code
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-Superhero Manager Menu
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-1. Create a Superhero
-2. View All Superheroes
-3. Delete a Superhero
-4. Exit
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-Enter your choice: 1
-Creating a Superhero:
-mathematica
-Copy code
-Enter Comic Name: Spider-Man
-Enter Volume Number: 5
-Enter Price (EUR): 4.99
-Does the superhero have superpowers? (true/false): true
-Superhero created successfully!
-Viewing All Superheroes:
-yaml
-Copy code
-List of Superheroes:
-Superhero Details:
-Comic: Spider-Man
-Volume: 5
-Price (EUR): 4.99
-Has Superpowers: Yes
---------------------
-Deleting a Superhero:
-arduino
-Copy code
-Enter the ID of the superhero to delete: 1
-Superhero deleted successfully!
-Exiting the Program:
-Copy code
-Exiting program...
-Notes
-Array Limitation: The program uses a fixed-size array of 10 elements to store superheroes. This means the application can manage up to 10 superheroes at a time. If you want to store more superheroes, you'll need to increase the size of the array or implement a dynamic data structure like an ArrayList.
-Superhero ID: Each superhero created will be given a unique ID based on the order in which they were added. The deletion of superheroes is based on their index in the list.
+Create a Superhero
+Choose "Superhero Management" > "Create a Superhero".
+Enter details such as comic name, volume, price, superpowers, and sales.
+View the confirmation message: Superhero created successfully!
+Convert Comic Prices
+Choose "Statistics and Utilities" > "Convert Comic Prices".
+Select a target currency (e.g., USD, GBP, JPY).
+View the converted prices displayed in the selected currency.
+Dependencies
+Java Development Kit (JDK) 8 or higher.
+A terminal or IDE (e.g., IntelliJ IDEA, Eclipse) to run the program.
 Future Enhancements
-Use an ArrayList instead of an array to allow dynamic storage and management of superheroes.
-Add additional properties or actions for superheroes, such as powers, abilities, or character biography.
-Implement exception handling for invalid inputs and other edge cases.
+Add the ability to update superhero details.
+Include more complex sales analytics (e.g., trend analysis).
+Integrate with external APIs for real-time currency conversion rates.
+Implement persistent storage for superheroes.
